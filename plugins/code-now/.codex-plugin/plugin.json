@@ -1,0 +1,37 @@
+{
+  "name": "code-now",
+  "version": "2.2.0",
+  "description": "Temporal awareness for Codex and Claude Code - injects precise timestamps and elapsed time into agent context",
+  "author": {
+    "name": "Boris Teo",
+    "email": "bdteo@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/bdteo/code-now",
+  "repository": "https://github.com/bdteo/code-now",
+  "license": "MIT",
+  "keywords": [
+    "temporal-awareness",
+    "hooks",
+    "codex",
+    "claude-code",
+    "productivity"
+  ],
+  "hooks": "./hooks.json",
+  "interface": {
+    "displayName": "CodeNow",
+    "shortDescription": "Temporal awareness for coding agents",
+    "longDescription": "Inject precise timestamps into Codex and Claude Code hook contexts so agents know the current time, elapsed time since the last message, and when supported tools complete.",
+    "developerName": "Boris Teo",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://github.com/bdteo/code-now",
+    "privacyPolicyURL": "https://github.com/bdteo/code-now",
+    "termsOfServiceURL": "https://github.com/bdteo/code-now",
+    "defaultPrompt": [
+      "Use CodeNow to keep agent context aware of the current time."
+    ],
+    "brandColor": "#111827"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=codex \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT:-$(pwd)}}/hooks/hook.sh\" || true",
+            "statusMessage": "Adding current time"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=codex \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT:-$(pwd)}}/hooks/hook.sh\" || true",
+            "statusMessage": "Adding current time"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=codex \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT:-$(pwd)}}/hooks/hook.sh\" || true",
+            "statusMessage": "Timestamping tool start"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=codex \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT:-$(pwd)}}/hooks/hook.sh\" || true",
+            "statusMessage": "Timestamping tool completion"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=codex \"${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT:-$(pwd)}}/hooks/hook.sh\" || true"
+          }
+        ]
+      }
+    ]
+  }
+}

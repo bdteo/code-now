@@ -1,0 +1,24 @@
+{
+  "name": "code-now",
+  "metadata": {
+    "description": "Temporal awareness for Claude Code and Codex",
+    "version": "2.2.0"
+  },
+  "owner": {
+    "name": "Boris Teo",
+    "email": "bdteo@users.noreply.github.com"
+  },
+  "plugins": [
+    {
+      "name": "code-now",
+      "description": "Temporal awareness for Claude Code and Codex - injects precise timestamps and elapsed time into agent context",
+      "author": {
+        "name": "Boris Teo",
+        "email": "bdteo@users.noreply.github.com"
+      },
+      "source": "./plugins/code-now",
+      "category": "productivity",
+      "homepage": "https://github.com/bdteo/code-now"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "code-now",
+  "description": "Temporal awareness for Claude Code and Codex - injects precise timestamps and elapsed time into agent context",
+  "version": "2.2.0",
+  "author": {
+    "name": "Boris Teo",
+    "email": "bdteo@users.noreply.github.com"
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=claude \"${CLAUDE_PLUGIN_ROOT}/hooks/hook.sh\" || true"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=claude \"${CLAUDE_PLUGIN_ROOT}/hooks/hook.sh\" || true"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=claude \"${CLAUDE_PLUGIN_ROOT}/hooks/hook.sh\" || true"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=claude \"${CLAUDE_PLUGIN_ROOT}/hooks/hook.sh\" || true"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=claude \"${CLAUDE_PLUGIN_ROOT}/hooks/hook.sh\" || true"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CODE_NOW_RUNTIME=claude \"${CLAUDE_PLUGIN_ROOT}/hooks/hook.sh\" || true"
+          }
+        ]
+      }
+    ]
+  }
+}

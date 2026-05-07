@@ -1,0 +1,20 @@
+{
+  "name": "code-now",
+  "interface": {
+    "displayName": "CodeNow"
+  },
+  "plugins": [
+    {
+      "name": "code-now",
+      "source": {
+        "source": "local",
+        "path": "./plugins/code-now"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
